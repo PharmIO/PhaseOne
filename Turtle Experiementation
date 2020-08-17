@@ -1,0 +1,23 @@
+import turtle
+import random
+
+prompt_color = input("What color would you like the screen? [green,blue,red,PeachPuff]")
+tess_prompt_color = input("What Color would you like turtle?")
+tess_prompt_size = input("What size would you like Tess to be?")
+tess_prompt_speed = input("What speed would you like Tess to be?")
+wn = turtle.Screen()
+wn.bgcolor(prompt_color)
+tess = turtle.Turtle()
+tess.color(tess_prompt_color)              # make tess blue
+tess.pensize(int(tess_prompt_size))                 # set the width of her pen
+tess.speed(int(tess_prompt_speed))
+
+d = 1
+angle = 91
+
+for i in range(1,400):
+    tess.forward(d)
+    tess.right(angle)
+    d+=1
+
+wn.exitonclick()                # wait for a user click on the canvas
